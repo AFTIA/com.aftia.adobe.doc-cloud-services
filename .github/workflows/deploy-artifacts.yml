@@ -1,4 +1,4 @@
-name: Deploy Container
+name: Deploy Artifacts
 on:
   push:
     branches:
