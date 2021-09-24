@@ -12,7 +12,6 @@
   <modules>
     <module>core</module>
     <module>karaf-module</module>
-    <module>sling-module</module>
   </modules>
 
   <properties>

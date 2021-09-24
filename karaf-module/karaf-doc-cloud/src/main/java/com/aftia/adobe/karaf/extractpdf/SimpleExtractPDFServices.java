@@ -1,0 +1,29 @@
+package com.aftia.adobe.karaf.extractpdf;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import com.adobe.pdfservices.operation.pdfops.options.extractpdf.ExtractPDFOptions;
+import com.aftia.adobe.core.DocAuthentication;
+import com.aftia.adobe.core.exceptions.DocCloudException;
+import com.aftia.adobe.core.extractpdf.ExtractTextInfoFromPDF;
+import com.aftia.adobe.karaf.DocCloudModules;
+
+import org.osgi.service.component.annotations.Component;
+
+@Component(service = ExtractPDFServices.class, immediate = true)
+public class SimpleExtractPDFServices implements ExtractPDFServices {
+
+    @Override
+    public String getModuleName() {
+        return DocCloudModules.ExtractPDF.name();
+    }
+
+    @Override
+    public OutputStream extractTextFromPDF(InputStream pdf, ExtractPDFOptions extractPDFOptions,
+            DocAuthentication docAuthentication) throws DocCloudException {
+        return ExtractTextInfoFromPDF.extractTextInfoFromPDF(pdf, extractPDFOptions, docAuthentication);
+    }
+
+    
+}
