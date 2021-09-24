@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - feature/*
+  pull_request:
+    branches:
+      - feature/*
 jobs:
   build_and_test:
     name: Java Build and Test
@@ -21,7 +24,16 @@ jobs:
         with:
           java-version: "11"
           architecture: x64
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+      - name: Copy File
+        run: |
+          cp .mavenrc ~/
       - name: Run Maven
         run: mvn --settings settings.xml clean install
-         env:
-          PACKAGES_TOKEN: ${{secrets.PACKAGES_TOKEN}}
+        env:
+          CODEARTIFACT_TOKEN: ${{secrets.CODEARTIFACT_TOKEN}}
