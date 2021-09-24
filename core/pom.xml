@@ -8,7 +8,7 @@
   </parent>
 
   <groupId>com.aftia.adobe</groupId>
-  <artifactId>core</artifactId>
+  <artifactId>doc-cloud-services.core</artifactId>
 
   <name>Doc Cloud Core SDK</name>
 
@@ -59,7 +59,7 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>target/core-${project.version}-jar-with-dependencies.jar</file>
+                  <file>target/doc-cloud-services.core-1.0-SNAPSHOT-jar-with-dependencies.jar</file>
                   <type>jar</type>
                   <classifier>jar-with-dependencies</classifier>
                 </artifact>

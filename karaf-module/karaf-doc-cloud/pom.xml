@@ -8,7 +8,7 @@
   </parent>
 
   <groupId>com.aftia.adobe</groupId>
-  <artifactId>karaf-doc-cloud</artifactId>
+  <artifactId>doc-cloud-services.karaf-doc-cloud</artifactId>
 
   <packaging>bundle</packaging>
 

@@ -7,7 +7,7 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <groupId>com.aftia.adobe</groupId>
-  <artifactId>karaf-module</artifactId>
+  <artifactId>doc-cloud-services.karaf-module</artifactId>
   <packaging>pom</packaging>
   <name>Apache Karaf Doc Cloud Wrapper</name>
   <modules>
