@@ -35,8 +35,12 @@
           <exportScr>true</exportScr>
           <instructions>
             <Embed-Dependency>core</Embed-Dependency>
-            <Private-Package>com.aftia.adobe.core.*</Private-Package>
-            <Export-Package>com.aftia.adobe.karaf.*, com.adobe.pdfservices.operation.*</Export-Package>
+            <Private-Package>com.aftia.adobe.doccloud.core.services.*</Private-Package>
+            <Export-Package>com.aftia.adobe.karaf.*, 
+                  com.adobe.pdfservices.operation.*,
+                  com.aftia.adobe.doccloud.core.authentication.*,
+                  com.aftia.adobe.doccloud.core.exceptions.*,
+                </Export-Package>
             <Import-Package>org.xml.sax.*, 
                             javax.xml.transform.*, 
                             javax.xml.stream.*,

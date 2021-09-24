@@ -1,4 +1,4 @@
-package com.aftia.adobe.core.exceptions;
+package com.aftia.adobe.doccloud.core.exceptions;
 
 public class DocCloudException extends Exception {
 

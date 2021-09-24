@@ -1,4 +1,4 @@
-package com.aftia.adobe.core.extractpdf;
+package com.aftia.adobe.doccloud.core.services.extractpdf;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -11,8 +11,8 @@ import com.adobe.pdfservices.operation.io.FileRef;
 import com.adobe.pdfservices.operation.pdfops.ExtractPDFOperation;
 import com.adobe.pdfservices.operation.pdfops.options.extractpdf.ExtractElementType;
 import com.adobe.pdfservices.operation.pdfops.options.extractpdf.ExtractPDFOptions;
-import com.aftia.adobe.core.DocAuthentication;
-import com.aftia.adobe.core.exceptions.DocCloudException;
+import com.aftia.adobe.doccloud.core.authentication.DocAuthentication;
+import com.aftia.adobe.doccloud.core.exceptions.DocCloudException;
 
 public class ExtractTextInfoFromPDF {
 

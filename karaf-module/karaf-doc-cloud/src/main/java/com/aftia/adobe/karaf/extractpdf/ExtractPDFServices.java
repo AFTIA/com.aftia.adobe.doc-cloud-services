@@ -4,8 +4,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 import com.adobe.pdfservices.operation.pdfops.options.extractpdf.ExtractPDFOptions;
-import com.aftia.adobe.core.DocAuthentication;
-import com.aftia.adobe.core.exceptions.DocCloudException;
+import com.aftia.adobe.doccloud.core.authentication.DocAuthentication;
+import com.aftia.adobe.doccloud.core.exceptions.DocCloudException;
 import com.aftia.adobe.karaf.DocService;
 
 public interface ExtractPDFServices extends DocService {
