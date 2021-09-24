@@ -22,4 +22,6 @@ jobs:
           java-version: "11"
           architecture: x64
       - name: Run Maven
-        run: mvn clean install
+        run: mvn --settings settings.xml clean install
+         env:
+          PACKAGES_TOKEN: ${{secrets.PACKAGES_TOKEN}}
