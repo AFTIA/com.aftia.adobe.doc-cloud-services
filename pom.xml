@@ -23,12 +23,11 @@
 
   <distributionManagement>
     <repository>
-      <id>aftia-github</id>
-      <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/AFTIA/com.aftia.adobe.doc-cloud-services</url>
+      <id>aftia-artifacts-aftia-internal</id>
+      <name>aftia-artifacts-aftia-internal</name>
+      <url>https://aftia-artifacts-282486032588.d.codeartifact.us-east-2.amazonaws.com/maven/aftia-internal/</url>
     </repository>
   </distributionManagement>
-
 
   <build>
     <pluginManagement>

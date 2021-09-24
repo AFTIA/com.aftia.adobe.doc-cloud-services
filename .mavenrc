@@ -1,0 +1,1 @@
+export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain aftia-artifacts --domain-owner 282486032588 --query authorizationToken --output text`
