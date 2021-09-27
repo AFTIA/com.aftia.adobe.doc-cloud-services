@@ -34,7 +34,7 @@
         <configuration>
           <exportScr>true</exportScr>
           <instructions>
-            <Embed-Dependency>core</Embed-Dependency>
+            <Embed-Dependency>doc-cloud-services.core</Embed-Dependency>
             <Private-Package>com.aftia.adobe.doccloud.core.services.*</Private-Package>
             <Export-Package>com.aftia.adobe.karaf.*, 
                   com.adobe.pdfservices.operation.*,
