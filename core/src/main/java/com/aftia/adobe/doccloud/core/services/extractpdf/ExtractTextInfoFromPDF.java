@@ -3,13 +3,10 @@ package com.aftia.adobe.doccloud.core.services.extractpdf;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Arrays;
 
 import com.adobe.pdfservices.operation.ExecutionContext;
-import com.adobe.pdfservices.operation.auth.Credentials;
 import com.adobe.pdfservices.operation.io.FileRef;
 import com.adobe.pdfservices.operation.pdfops.ExtractPDFOperation;
-import com.adobe.pdfservices.operation.pdfops.options.extractpdf.ExtractElementType;
 import com.adobe.pdfservices.operation.pdfops.options.extractpdf.ExtractPDFOptions;
 import com.aftia.adobe.doccloud.core.authentication.DocAuthentication;
 import com.aftia.adobe.doccloud.core.exceptions.DocCloudException;
