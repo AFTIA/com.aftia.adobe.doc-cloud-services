@@ -1,4 +1,4 @@
-package com.aftia.adobe.karaf;
+package com.aftia.adobe.karaf.doccloud.core;
 
 public interface DocService {
     

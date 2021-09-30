@@ -46,7 +46,8 @@
                             javax.xml.stream.*,
                             javax.net.ssl.*,
                             javax.naming.*,
-                            javax.net.*
+                            javax.net.*,
+                            org.osgi.service.*
             </Import-Package>
           </instructions>
         </configuration>
