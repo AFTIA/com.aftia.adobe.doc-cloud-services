@@ -34,7 +34,7 @@ public class OSGiDocAuthenticationManager implements DocAuthenticationManager {
                 dup.put(DocAuthenticationConstants.CLIENT_SECRET, clientSecret);
                 dup.put(DocAuthenticationConstants.ACCOUNT_ID, accountId);
                 dup.put(DocAuthenticationConstants.ORGANIZATION_ID, orgnizationId);
-                dup.put(DocAuthenticationConstants.PRIVATE_KEY_URL, here);
+                dup.put(DocAuthenticationConstants.PRIVATE_KEY_URL, String.format("file://%s", here));
 
                 this.configurationAdmin.getConfiguration(DocAuthenticationConstants.DOC_AUTHENTICATION_PID)
                                 .updateIfDifferent(dup);
