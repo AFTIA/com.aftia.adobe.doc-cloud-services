@@ -10,7 +10,7 @@
   <groupId>com.aftia.adobe</groupId>
   <artifactId>doc-cloud-services.core</artifactId>
 
-  <name>Doc Cloud Core SDK</name>
+  <name>Adobe Doc Cloud - Core</name>
 
   <build>
     <plugins>

@@ -10,13 +10,13 @@
   <groupId>com.aftia.adobe</groupId>
   <artifactId>doc-cloud-services.module</artifactId>
   
-  <name>Doc Cloud Services - Module</name>
+  <name>Adobe Doc Cloud - Module</name>
 
   <packaging>pom</packaging>
 
   <modules>
-    <module>core</module>
-    <module>karaf-module</module>
+    <module>doc-cloud-services.core</module>
+    <module>doc-cloud-services.karaf</module>
   </modules>
   
 </project>

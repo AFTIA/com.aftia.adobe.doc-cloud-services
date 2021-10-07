@@ -12,7 +12,7 @@
 
   <packaging>pom</packaging>
   
-  <name>Adobe Sign Services - Module</name>
+  <name>Adobe Sign - Module</name>
   
   <modules>
     <module>adobe-sign-services.core</module>

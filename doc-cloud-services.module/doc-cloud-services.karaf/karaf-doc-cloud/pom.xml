@@ -12,7 +12,7 @@
 
   <packaging>bundle</packaging>
 
-  <name>Apache Karaf Doc Cloud Bundle</name>
+  <name>Adobe Doc Cloud - Karaf Core</name>
 
   <build>
     <plugins>

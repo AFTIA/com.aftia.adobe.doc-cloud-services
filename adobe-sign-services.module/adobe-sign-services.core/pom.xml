@@ -10,7 +10,7 @@
   <groupId>com.aftia.adobe</groupId>
   <artifactId>adobe-sign-services.core</artifactId>
 
-  <name>Adobe Sign Services - Core</name>
+  <name>Adobe Sign - Core</name>
 
   <build>
     <plugins>

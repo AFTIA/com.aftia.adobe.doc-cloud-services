@@ -8,8 +8,11 @@
   </parent>
   <groupId>com.aftia.adobe</groupId>
   <artifactId>doc-cloud-services.karaf</artifactId>
+  
   <packaging>pom</packaging>
-  <name>Apache Karaf Doc Cloud Wrapper</name>
+  
+  <name>Adobe Doc Cloud - Karaf</name>
+
   <modules>
     <module>karaf-doc-cloud</module>
   </modules>

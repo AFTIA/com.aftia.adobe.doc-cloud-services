@@ -12,7 +12,7 @@
   
   <packaging>pom</packaging>
   
-  <name>Adobe Sign Services - Karaf</name>
+  <name>Adobe Sign - Karaf</name>
   
   <modules>
     <module>adobe-sign-services.karaf-core</module>

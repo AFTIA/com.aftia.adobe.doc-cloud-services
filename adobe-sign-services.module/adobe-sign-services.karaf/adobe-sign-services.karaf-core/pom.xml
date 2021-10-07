@@ -12,7 +12,7 @@
   
   <packaging>bundle</packaging>
   
-  <name>Adobe Sign Services - Karaf Core</name>
+  <name>Adobe Sign - Karaf Core</name>
 
   <build>
     <plugins>
