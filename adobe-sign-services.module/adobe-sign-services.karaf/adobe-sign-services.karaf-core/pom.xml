@@ -36,7 +36,17 @@
           <instructions>
             <Embed-Dependency>adobe-sign-services.core</Embed-Dependency>
             <Private-Package>com.aftia.adobe.adobesign.core.services.*</Private-Package>
-            <Export-Package>com.aftia.adobe.adobesign.core.authentication.*, com.aftia.adobe.adobesign.core.client.*, com.aftia.adobe.adobesign.core.exceptions.*, </Export-Package>
+            <Export-Package>com.aftia.adobe.adobesign.core.authentication.*, 
+              com.aftia.adobe.adobesign.core.client.*, 
+              com.aftia.adobe.adobesign.core.exceptions.*, 
+              com.aftia.adobe.karaf.adobesign.core.* </Export-Package>
+            <Import-Package>!android.net.*, 
+              !com.android.org.conscrypt.*, 
+              !org.apache.harmony.xnet.provider.jsse.*, 
+              !sun.security.ssl.*, 
+              javax.net.*, 
+              org.apache.http.*, 
+              org.osgi.service.*</Import-Package>
           </instructions>
         </configuration>
       </plugin>
