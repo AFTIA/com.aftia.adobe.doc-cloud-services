@@ -2,34 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>doc-cloud-services</artifactId>
+    <artifactId>adobe-sign-services.module</artifactId>
     <groupId>com.aftia.adobe</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
   <groupId>com.aftia.adobe</groupId>
-  <artifactId>doc-cloud-services.core</artifactId>
+  <artifactId>adobe-sign-services.core</artifactId>
 
-  <name>Doc Cloud Core SDK</name>
+  <name>Adobe Sign Services - Core</name>
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-        <includes>
-          <include>pdfservices-api-credentials.json</include>
-          <include>private.key</include>
-          <include>salesOrder.json</include>
-          <include>salesOrderTemplate.docx</include>
-        </includes>
-      </resource>
-    </resources>
     <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-      </plugin>
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
@@ -48,16 +32,11 @@
       </plugin>
     </plugins>
   </build>
-
+  
   <dependencies>
     <dependency>
-      <groupId>com.adobe.documentservices</groupId>
-      <artifactId>pdfservices-sdk</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
+      <groupId>io.swagger</groupId>
+      <artifactId>swagger-java-client</artifactId>
     </dependency>
   </dependencies>
-
 </project>
