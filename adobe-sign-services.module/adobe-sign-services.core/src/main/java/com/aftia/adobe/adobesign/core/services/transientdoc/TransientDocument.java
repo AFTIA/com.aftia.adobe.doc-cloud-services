@@ -17,7 +17,7 @@ public class TransientDocument {
         try {
             TransientDocumentsApi transientDocumentsApi = new TransientDocumentsApi(apiClient.buildClient());
             TransientDocumentResponse response = transientDocumentsApi.createTransientDocument(
-                    authentication.authenticate(), file, xApiUser, xOnBehalfOfUser, fileName, mimeType);
+                    String.format("Bearer %s", authentication.authenticate()), file, xApiUser, xOnBehalfOfUser, fileName, mimeType);
             return response.getTransientDocumentId();
         } catch (ApiException e) {
            throw new AdobeSignServiceException(e.getMessage(), e);

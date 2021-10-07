@@ -33,7 +33,7 @@ public class SimpleAdobeSignApiClient implements AdobeSignApiClient {
 
             // Get the baseUris for the user and set it in apiClient.
             BaseUrisApi baseUrisApi = new BaseUrisApi(apiClient);
-            BaseUriInfo baseUriInfo = baseUrisApi.getBaseUris(this.adobeSignAuthentication.authenticate());
+            BaseUriInfo baseUriInfo = baseUrisApi.getBaseUris(String.format("Bearer %s", this.adobeSignAuthentication.authenticate()));
             apiClient.setBasePath(baseUriInfo.getApiAccessPoint() + endpointUrl);
         } catch (ApiException e) {
             throw new AdobeSignServiceException(e.getMessage(), e);
@@ -54,7 +54,7 @@ public class SimpleAdobeSignApiClient implements AdobeSignApiClient {
             
             // Get the baseUris for the user and set it in apiClient.
             BaseUrisApi baseUrisApi = new BaseUrisApi(apiClient);
-            BaseUriInfo baseUriInfo = baseUrisApi.getBaseUris(this.adobeSignAuthentication.authenticate());
+            BaseUriInfo baseUriInfo = baseUrisApi.getBaseUris(String.format("Bearer %s", this.adobeSignAuthentication.authenticate()));
             apiClient.setBasePath(baseUriInfo.getApiAccessPoint() + endpointUrl);
         } catch (ApiException e) {
             throw new AdobeSignServiceException(e.getMessage(), e);
