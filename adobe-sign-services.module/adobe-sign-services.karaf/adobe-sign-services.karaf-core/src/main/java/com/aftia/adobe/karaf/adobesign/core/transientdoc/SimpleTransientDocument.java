@@ -8,9 +8,7 @@ import com.aftia.adobe.adobesign.core.exceptions.AdobeSignServiceException;
 import com.aftia.adobe.adobesign.core.services.transientdoc.TransientDocument;
 import com.aftia.adobe.karaf.adobesign.core.AdobeSignModules;
 
-import org.osgi.service.component.annotations.Activate;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.component.annotations.Reference;
 
 @Component(service = TransientDocumentService.class, immediate = true)
 public class SimpleTransientDocument implements TransientDocumentService {

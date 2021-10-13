@@ -39,7 +39,9 @@
             <Export-Package>com.aftia.adobe.adobesign.core.authentication.*, 
               com.aftia.adobe.adobesign.core.client.*, 
               com.aftia.adobe.adobesign.core.exceptions.*, 
-              com.aftia.adobe.karaf.adobesign.core.* </Export-Package>
+              com.aftia.adobe.karaf.adobesign.core.*,
+              io.swagger.client.model.*
+             </Export-Package>
             <Import-Package>!android.net.*, 
               !com.android.org.conscrypt.*, 
               !org.apache.harmony.xnet.provider.jsse.*, 
