@@ -33,7 +33,7 @@ public class SimpleAdobeSignAuthentication implements AdobeSignAuthentication {
     public String authenticate(String baseUrl, String grantType, String clientId, String clientSecret,
             String refreshToken) throws AdobeSignServiceException {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
-            HttpPost httpPost = new HttpPost(String.format("%s/oauth/refresh", baseUrl));
+            HttpPost httpPost = new HttpPost(String.format("%s" + AdobeSignConstants.OAUTH_REFRESH_CONTEXT, baseUrl));
 
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("grant_type", grantType));
@@ -68,7 +68,7 @@ public class SimpleAdobeSignAuthentication implements AdobeSignAuthentication {
     @Override
     public String authenticate() throws AdobeSignServiceException {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
-            HttpPost httpPost = new HttpPost(String.format("%s/oauth/refresh", this.componentContext.getProperties().get(AdobeSignConstants.AUTH_BASE_URL).toString()));
+            HttpPost httpPost = new HttpPost(String.format("%s" + AdobeSignConstants.OAUTH_REFRESH_CONTEXT, this.componentContext.getProperties().get(AdobeSignConstants.AUTH_BASE_URL).toString()));
 
             List<NameValuePair> params = new ArrayList<NameValuePair>();
             params.add(new BasicNameValuePair("grant_type", this.componentContext.getProperties().get(AdobeSignConstants.AUTH_GRANT_TYPE).toString()));
