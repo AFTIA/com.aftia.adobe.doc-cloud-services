@@ -13,5 +13,7 @@ public class AdobeSignConstants {
 
     public static final String AUTH_PID = "com.aftia.adobe.karaf.adobesign.authentication.config";
     public static final String CLIENT_PID = "com.aftia.adobe.karaf.adobesign.client.config";
+
+    public static final String OAUTH_REFRESH_CONTEXT = "/oauth/v2/refresh";
     
 }
