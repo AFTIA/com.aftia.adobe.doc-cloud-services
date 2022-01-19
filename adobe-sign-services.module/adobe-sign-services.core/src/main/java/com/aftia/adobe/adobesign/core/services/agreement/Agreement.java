@@ -20,7 +20,7 @@ public class Agreement {
                     xOnBehalfOfUser);
             return agreementCreationResponse.getId();
         } catch (ApiException e) {
-            throw new AdobeSignServiceException(e.getMessage(), e);
+            throw new AdobeSignServiceException(e.getResponseBody(), e);
         }
 
     }
@@ -39,7 +39,7 @@ public class Agreement {
                     xOnBehalfOfUser);
             return agreementViews.getAgreementViewList().get(0).getUrl();
         } catch (ApiException e) {
-            throw new AdobeSignServiceException(e.getMessage(), e);
+            throw new AdobeSignServiceException(e.getResponseBody(), e);
         }
 
     }
