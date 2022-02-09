@@ -25,6 +25,9 @@ public class PowerAutomateRepository implements Repository {
         if (folderPath == null) {
             folderPath = "";
         }
+        if (filter == null) {
+            filter = "";
+        }
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             HttpPost httpPost = new HttpPost(getFileListUrl);
 
