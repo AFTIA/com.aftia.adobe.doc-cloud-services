@@ -1,11 +1,7 @@
 package com.aftia.adobe.karaf.doccloud.core.repository;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Files {
-    ArrayList<File> files = new ArrayList<>();
-
-    public ArrayList<File> getFiles() {
-        return files;
-    }
+    List<File> files;
 }
