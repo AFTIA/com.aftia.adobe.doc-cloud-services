@@ -104,7 +104,7 @@ public class PowerAutomateRepository implements Repository {
 
             String json = "{\n" +
                     "    \"sharepointsite\": \"" + sharePointUrl + "\",\n" +
-                    "    \"path\": \"" + folderPath + "\"\n" +
+                    "    \"path\": \"" + folderPath + "\",\n" +
                     "    \"filename\": \"" + fileName + "\"\n" +
                     "}";
             StringEntity entity = new StringEntity(json);
