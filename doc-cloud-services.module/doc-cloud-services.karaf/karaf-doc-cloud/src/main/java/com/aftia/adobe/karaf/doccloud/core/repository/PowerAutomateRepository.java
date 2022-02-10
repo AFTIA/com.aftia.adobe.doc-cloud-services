@@ -1,6 +1,7 @@
 package com.aftia.adobe.karaf.doccloud.core.repository;
 
 import com.aftia.adobe.doccloud.core.exceptions.DocCloudException;
+import com.google.gson.JsonObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
@@ -31,13 +32,12 @@ public class PowerAutomateRepository implements Repository {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             HttpPost httpPost = new HttpPost(getFileListUrl);
 
-            String json = "{\n" +
-                    "    \"sharepointsite\": \"" + sharePointUrl + "\",\n" +
-                    "    \"path\": \"" + folderPath + "\",\n" +
-                    "    \"filter\" : \"" + filter + "\"\n" +
-                    "}";
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("sharepointsite", sharePointUrl);
+            jsonObject.addProperty("path", folderPath);
+            jsonObject.addProperty("filter", filter);
 
-            StringEntity entity = new StringEntity(json);
+            StringEntity entity = new StringEntity(jsonObject.toString());
             httpPost.setEntity(entity);
             httpPost.setHeader("Accept", "application/json");
             httpPost.setHeader("Content-type", "application/json");
@@ -70,11 +70,11 @@ public class PowerAutomateRepository implements Repository {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             HttpPost httpPost = new HttpPost(getFolderListUrl);
 
-            String json = "{\n" +
-                    "    \"sharepointsite\": \"" + sharePointUrl + "\",\n" +
-                    "    \"path\": \"" + folderPath + "\"\n" +
-                    "}";
-            StringEntity entity = new StringEntity(json);
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("sharepointsite", sharePointUrl);
+            jsonObject.addProperty("path", folderPath);
+
+            StringEntity entity = new StringEntity(jsonObject.toString());
             httpPost.setEntity(entity);
             httpPost.setHeader("Accept", "application/json");
             httpPost.setHeader("Content-type", "application/json");
@@ -105,12 +105,12 @@ public class PowerAutomateRepository implements Repository {
         try (CloseableHttpClient client = HttpClients.createDefault()) {
             HttpPost httpPost = new HttpPost(getFileContentsUrl);
 
-            String json = "{\n" +
-                    "    \"sharepointsite\": \"" + sharePointUrl + "\",\n" +
-                    "    \"path\": \"" + folderPath + "\",\n" +
-                    "    \"filename\": \"" + fileName + "\"\n" +
-                    "}";
-            StringEntity entity = new StringEntity(json);
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("sharepointsite", sharePointUrl);
+            jsonObject.addProperty("path", folderPath);
+            jsonObject.addProperty("filename", fileName);
+
+            StringEntity entity = new StringEntity(jsonObject.toString());
             httpPost.setEntity(entity);
             httpPost.setHeader("Accept", "application/json");
             httpPost.setHeader("Content-type", "application/json");

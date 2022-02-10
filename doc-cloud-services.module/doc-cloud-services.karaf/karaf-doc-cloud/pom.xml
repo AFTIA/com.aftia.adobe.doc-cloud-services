@@ -47,7 +47,8 @@
                             javax.net.ssl.*,
                             javax.naming.*,
                             javax.net.*,
-                            org.osgi.service.*
+                            org.osgi.service.*,
+                            com.google.gson.*,
             </Import-Package>
           </instructions>
         </configuration>
